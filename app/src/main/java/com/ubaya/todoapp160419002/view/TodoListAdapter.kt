@@ -23,6 +23,7 @@ class TodoListAdapter(val todoList:ArrayList<Todo>, val adapterOnClick: (Todo) -
         val todo = todoList[position]
         with(holder.view) {
             checkTask.text = todo.title
+            checkTask.isChecked = false
             checkTask.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) adapterOnClick(todo)
             }

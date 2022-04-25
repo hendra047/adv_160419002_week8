@@ -23,7 +23,8 @@ class TodoListFragment : Fragment() {
     private var todoListAdapter = TodoListAdapter(arrayListOf()
     ) {
 //        item -> viewModel.clearTask(item)
-        viewModel.clearTask(it)
+//        viewModel.clearTask(it)
+        viewModel.updateIsDone(it.uuid)
     }
 
     override fun onCreateView(

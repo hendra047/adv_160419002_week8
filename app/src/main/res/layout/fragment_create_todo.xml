@@ -85,44 +85,30 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <RadioButton
+            android:id="@+id/radioHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:tag="3"
+            android:text="High" />
 
-            <RadioButton
-                android:id="@+id/radioHigh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:tag="3"
-                android:text="High"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <RadioButton
+            android:id="@+id/radioMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:tag="2"
+            android:text="Medium" />
 
-            <RadioButton
-                android:id="@+id/radioMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:tag="2"
-                android:text="Medium"
-                app:layout_constraintBottom_toBottomOf="@+id/radioHigh"
-                app:layout_constraintStart_toEndOf="@+id/radioHigh"
-                app:layout_constraintTop_toTopOf="@+id/radioHigh" />
-
-            <RadioButton
-                android:id="@+id/radioLow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:tag="1"
-                android:text="Low"
-                app:layout_constraintBottom_toBottomOf="@+id/radioMedium"
-                app:layout_constraintStart_toEndOf="@+id/radioMedium"
-                app:layout_constraintTop_toTopOf="@+id/radioMedium" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <RadioButton
+            android:id="@+id/radioLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="0"
+            android:tag="1"
+            android:text="Low" />
 
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,4 +46,15 @@ class ListTodoViewModel(application: Application) : AndroidViewModel(application
             todoLD.value = db.todoDao().selectAllTodo()
         }
     }
+
+    fun updateIsDone(uuid: Int) {
+        launch {
+            val db = Room.databaseBuilder(
+                getApplication(),
+                TodoDatabase::class.java, "newtododb").build()
+            db.todoDao().updateIsDone(uuid)
+
+            todoLD.value = db.todoDao().selectAllTodo()
+        }
+    }
 }
